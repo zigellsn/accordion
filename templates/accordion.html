@@ -1,0 +1,49 @@
+<div class="flex flex-col" _="install AccordionClick">
+    <div class="my-2 dark:bg-gray-800 shadow-lg dark:shadow-gray-800 acc-header selected">
+        <div class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer">
+            <span>View 1</span>
+            {% include 'icons/chevron_down.html' %}
+        </div>
+        <div class="dark:bg-gray-800 acc-content px-8 overflow-hidden h-0 ease duration-500">
+            <div hx-get="{% url 'view1' %}" hx-trigger="load" hx-swap="outerHTML" class="pb-8">
+                Loading View 1
+            </div>
+        </div>
+    </div>
+
+    <div class="my-2 dark:bg-gray-800 shadow-lg dark:shadow-gray-800 acc-header">
+        <div class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer">
+            <span>View 2</span>
+            {% include 'icons/chevron_down.html' %}
+        </div>
+        <div class="dark:bg-gray-800 acc-content px-8 overflow-hidden h-0 ease duration-500">
+            <div hx-get="{% url 'view2' %}" hx-trigger="load" hx-swap="outerHTML" class="pb-8">
+                Loading View 2
+            </div>
+        </div>
+    </div>
+
+    <div class="my-2 dark:bg-gray-800 shadow-lg dark:shadow-gray-800 acc-header">
+        <div class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer">
+            <span>View 3</span>
+            {% include 'icons/chevron_down.html' %}
+        </div>
+        <div class="dark:bg-gray-800 acc-content px-8 overflow-hidden h-0 ease duration-500">
+            <div hx-get="{% url 'view3' %}" hx-trigger="click from:closest .acc-header">
+                Loading View 3
+            </div>
+        </div>
+    </div>
+
+    <div class="my-2 dark:bg-gray-800 shadow-lg dark:shadow-gray-800 acc-header">
+        <div class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer">
+            <span>View 4</span>
+            {% include 'icons/chevron_down.html' %}
+        </div>
+        <div class="dark:bg-gray-800 acc-content px-8 overflow-hidden h-0 ease duration-500">
+            <div hx-get="{% url 'view4' %}" hx-trigger="click from:closest .acc-header" hx-swap="outerHTML" class="pb-8">
+                Loading View 4
+            </div>
+        </div>
+    </div>
+</div>

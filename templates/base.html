@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Accordion</title>
+    <link rel="icon" sizes="192x192" href="{% static "accordion/img/favicon.ico" %}" type="image/x-icon">
+    <link rel="apple-touch-icon" href="{% static "accordion/img/favicon.ico" %}" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static "accordion/img/favicon.ico" %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static "accordion/css/bundle.css" %}" type="text/css">
+    <script type="text/hyperscript" src="{% static 'accordion/behavior/accordion_click._hs' %}"></script>
+    <script src="https://unpkg.com/hyperscript.org@0.9.1" type="text/javascript"></script>
+</head>
+<body class="bg-white dark:bg-black text-black dark:text-white flex flex-col min-h-screen">
+<main class="flex-auto container pt-4">
+    {% include "accordion.html" %}
+</main>
+</body>
+<script src="https://unpkg.com/htmx.org@1.6.1"
+        integrity="sha384-tvG/2mnCFmGQzYC1Oh3qxQ7CkQ9kMzYjWZSNtrRZygHPDDqottzEJsqS4oUVodhW" crossorigin="anonymous"
+        type="text/javascript"></script>
+<script>
+    document.body.addEventListener('htmx:configRequest', (event) => {
+        event.detail.headers['X-CSRFToken'] = '{{ csrf_token }}';
+    })
+</script>
+<script>htmx.logAll();</script>
+</html>

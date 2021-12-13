@@ -1,0 +1,13 @@
+{
+  "name": "accordion",
+  "version": "1.0.0",
+  "description": "Accordion",
+  "scripts": {
+    "css": "tailwindcss -o ./Accordion/static/css/bundle.css --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.0.1"
+  }
+}
