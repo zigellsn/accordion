@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hyperscript Behavior: Accordion</title>
+    <script type="text/hyperscript" src="../../Accordion/static/behavior/Accordion._hs"></script>
+    <script src="https://unpkg.com/hyperscript.org"></script>
+    <link rel="stylesheet" href="accordion.css">
+</head>
+<body>
+
+<h1>Hyperscript Behavior: Accordion</h1>
+
+<p>This tab widget is built using <a href="https://hyperscript.org/features/behavior/" tabindex="0">hyperscript
+    behaviors</a>,
+    which allow us to attach multiple event handlers to a group of HTML elements.</p>
+
+<div _="install AccordionAnimate" class="accordion">
+    <div role="heading">
+        <button id="acc-1" class="accordion-trigger" aria-controls="content-1" aria-expanded="true">
+            <span>View 1</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+        </button>
+    </div>
+    <div id="content-1" role="region" aria-labelledby="acc-1">
+        <div>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+            dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+            clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+            consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+            sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
+            sea takimata sanctus est Lorem ipsum dolor sit amet.
+        </div>
+    </div>
+
+    <div role="heading">
+        <button id="acc-2" class="accordion-trigger" aria-controls="content-2" aria-expanded="false">
+            <span>View 2</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+        </button>
+    </div>
+    <div id="content-2" role="region" aria-labelledby="acc-2" hidden>
+        <ul>
+            <li>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</li>
+            <li>sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat</li>
+            <li>sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum</li>
+            <li>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet</li>
+        </ul>
+    </div>
+
+    <div role="heading">
+        <button id="acc-3" class="accordion-trigger" aria-controls="content-3" aria-expanded="false">
+            <span>View 3</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+        </button>
+    </div>
+    <div id="content-3" role="region" aria-labelledby="acc-3" hidden>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+            dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+            clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+            consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+            sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
+            sea takimata sanctus est Lorem ipsum dolor sit amet. </p>
+    </div>
+</div>
+
+</body>
+</html>
